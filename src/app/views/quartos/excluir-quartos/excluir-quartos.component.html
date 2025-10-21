@@ -1,0 +1,71 @@
+<div class="row justify-content-center align-items-center mt-5" style="padding-left: 20px; padding-top: 20px">
+  <div class="col-md-5">
+    <h1 class="fs-2">Excluir Quarto</h1>
+
+    <p class="fs-5">
+      Você tem certeza que deseja excluir o seguinte quarto?
+    </p>
+
+    <mat-list *ngIf="quartosVM | async as quarto">
+      <mat-list-item>
+        <div class="d-flex justify-content-between mt-3">
+          <span>Id:</span>
+          <span>{{quarto.id}}</span>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <div class="d-flex justify-content-between mt-3">
+          <span>Número:</span>
+          <span>{{quarto.number}}</span>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+    <mat-list-item>
+      <div class="d-flex justify-content-between mt-3">
+        <span>Andar:</span>
+        <span>{{quarto.floor}}</span>
+      </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+  <mat-list-item>
+      <div class="d-flex justify-content-between mt-3">
+        <span>Descrição:</span>
+        <span>{{quarto.description}}</span>
+      </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-list-item>
+      <div class="d-flex justify-content-between mt-3">
+        <span>Capacidade:</span>
+        <span>{{quarto.capacity}}</span>
+      </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+
+    <div class="d-flex justify-content-end gap-2 mt-3" style="padding-top: 10px;">
+      <button
+        class="py-3 px-5"
+        color="warn"
+        mat-raised-button
+        (click)="gravar()"
+        >
+
+        Excluir
+      </button>
+      <button
+        routerLink="/quartos/listar"
+        class="py-3 px-5 btn-spacing"
+        color="primary"
+        mat-stroked-button
+      >
+        Voltar
+      </button>
+    </div>
+
+

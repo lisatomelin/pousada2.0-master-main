@@ -1,0 +1,106 @@
+.button-container {
+  display: flex;
+  gap: 10px;
+  /* Espaçamento entre os botões */
+  flex-wrap: wrap;
+}
+
+.labels__container {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+
+  div {
+    width: 80px;
+    height: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border-radius: 10px;
+    &.disponivel {
+      color: rgba(25, 135, 84, 1);
+      border-color: rgba(25, 135, 84, 1);
+    }
+    &.ocupado {
+      color: rgba(220, 53, 69, 1);
+      border-color: rgba(220, 53, 69, 1);
+    }
+  }
+}
+
+.meu-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+  padding: 10px 30px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 75vw;
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 20rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+
+  .card-header {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  .card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+
+    .card-text {
+      margin-bottom: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      font-size: 1rem;
+    }
+  }
+}
+
+.disponivel {
+  background-color: rgba(25, 135, 84, 0.2) !important;
+}
+
+.ocupado {
+  background-color: rgba(220, 53, 69, 0.2) !important;
+}
+
+.logo-fixa {
+  position: fixed;     /* fixa na tela inteira */
+  bottom: 15px;        /* distância da borda inferior */
+  right: 15px;         /* distância da borda direita */
+  width: 80px;         /* tamanho da logo */
+  z-index: 1000;       /* garante que fique acima de outros elementos */
+  opacity: 0.9;        /* leve transparência */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,28 @@
+<section class="mt-5">
+  <div class="meu-container">
+    <div class="labels__container">
+      <div class="disponivel">Livre</div>
+      <div class="ocupado">Reservado</div>
+    </div>
+    <div class="cards-container mt-2">
+      <ng-container *ngFor="let quarto of quartos">
+        <div class="card">
+          <h5 class="card-header"
+              [class.disponivel]="quarto.status==='Livre'"
+              [class.ocupado]="quarto.status==='Reservado'">{{quarto.descricao}}</h5>
+          <div class="card-body">
+            <p class="card-text">
+              <mat-icon>account_circle</mat-icon>
+              {{ quarto.hospede }}
+            </p>
+            <p class="card-text mt-2">
+              <mat-icon>calendar_month</mat-icon>
+              {{ quarto.periodoReserva }}
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+<img src="assets/logo.png" alt="Logo" class="logo-fixa">
