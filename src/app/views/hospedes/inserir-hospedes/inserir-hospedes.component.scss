@@ -1,5 +1,7 @@
 .btn-spacing {
-  margin-left: 10px; /* ajuste o valor conforme necessário */
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px; /* ajuste o valor conforme necessário */
 }
 
 :host::ng-deep {

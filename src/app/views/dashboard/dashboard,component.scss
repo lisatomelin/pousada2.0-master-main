@@ -91,12 +91,12 @@
 }
 
 .logo-fixa {
-  position: fixed;     /* fixa na tela inteira */
-  bottom: 15px;        /* distância da borda inferior */
-  right: 15px;         /* distância da borda direita */
-  width: 80px;         /* tamanho da logo */
-  z-index: 1000;       /* garante que fique acima de outros elementos */
-  opacity: 0.9;        /* leve transparência */
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 150px;
+  z-index: 1000;
+  opacity: 0.9;
   transition: transform 0.3s ease, opacity 0.3s ease;
 
   &:hover {

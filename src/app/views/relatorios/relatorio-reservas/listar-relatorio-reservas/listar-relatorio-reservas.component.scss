@@ -32,8 +32,87 @@ tr:hover:nth-child(1n + 2) {
   color: #0c0a0a;
 }
 
+mat-stroked-button{
+  background-color: #ba3636;
+}
+
+.mat-mdc-form-field {
+  width: 200px;
+  padding: 10px;
+
+}
+button {
+  margin: 10px;
+  margin-top: 10px;
+}
 
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
+
+.table-wrapper {
+  overflow-x: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+}
+
+.custom-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.custom-table th {
+  background: #a3c1cdff;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  padding: 12px 10px;
+  font-weight: 400;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.custom-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.custom-table tr:hover {
+  background-color: #f5faff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.no-data {
+  color: #999;
+  font-style: italic;
+  padding: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .custom-table {
+    font-size: 13px;
+    min-width: 700px;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-table {
+    font-size: 12px;
+  }
+}
+

@@ -2,7 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.mat-toolbar {
-  background-color: #2e7d32; /* verde escuro bonito */
-  color: white;
+
+
+.mat-mdc-raised-button.mat-primary {
+  --mdc-protected-button-container-color: #487296;
 }

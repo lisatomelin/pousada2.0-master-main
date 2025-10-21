@@ -27,10 +27,16 @@ th {
 }
 
 tr:hover:nth-child(1n + 2) {
-  background-color: #a494df;
+  background-color: #a3c1cdff;
   color: #0c0a0a;
 }
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+
+
 }
+button {
+  margin: 10px;
+}
+
