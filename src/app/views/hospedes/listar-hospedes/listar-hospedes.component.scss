@@ -1,42 +1,118 @@
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 h1 {
   text-align: center;
+  margin-top: 20px;
 }
 
-table,
-th,
-td {
-  border: 1px solid black;
+button {
+  padding-left: 10px;
 }
 
-table {
-  border-collapse: collapse;
-  margin: auto;
-}
-
-th,
-td {
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 10px;
+}
+
+.custom-table {
+  width: 100%;
+  min-width: 500px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 12px;
+  margin: 0;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #000000;
+  padding: 4px 6px;
   text-align: center;
-  width: 180px;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
-th {
-  font-weight: bold;
+.custom-table thead th {
+  background: #a3c1cdff;
+  color: #000;
+  font-weight: 400;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 4px 6px;
+  text-align: left;
 }
 
-tr:hover:nth-child(1n + 2) {
-  background-color: #a3c1cdff;
-  color: #0c0a0a;
+.custom-table tbody tr:hover {
+  background-color: #f5faff;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.no-data {
+  color: #999;
+  font-style: italic;
+  padding: 8px;
+}
+
+.action-buttons {
+  display: inline-flex;
+  gap: 20px; /* aumento do espaçamento entre botões */
+  justify-content: center;
+  align-items: center;
+}
+
+.action-buttons button,
+.custom-table button {
+  margin: 0;
+  padding: 4px 6px;
+  line-height: 1;
+  border: 1px solid #a0a0a0;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 12px;
+  min-width: 36px;
+}
+
+.action-buttons .btn-edit {
+  border-color: #7aa;
+}
+.action-buttons .btn-delete {
+  border-color: #e6a;
+  margin-left: 6px; /* espaçamento extra de segurança para casos onde gap não seja aplicado */
 }
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-
-
-}
-button {
-  margin: 10px;
+  vertical-align: middle;
+  margin: 0;
 }
 
+@media (max-width: 768px) {
+  .custom-table {
+    font-size: 13px;
+    min-width: 320px;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    padding: 6px 8px;
+  }
+
+  .action-buttons {
+    gap: 4px;
+  }
+
+  .action-buttons button {
+    padding: 4px 5px;
+    min-width: 32px;
+    font-size: 12px;
+  }
+}

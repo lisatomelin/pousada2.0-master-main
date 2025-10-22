@@ -1,19 +1,21 @@
-<div class="row justify-content-center mt-5" style="padding-left: 20px; padding-top: 20px">
-  <div class="col-md-8 d-grid gap-3">
-    <h1 class="fs-2 row justify-content-center">
-      Lista de Hóspedes Cadastrados
-    </h1>
+<div class="row justify-content-center mt-5 px-3">
+  <div class="col-md-10 d-grid gap-3">
+    <h1 class="fs-2 text-center mb-4">Lista de Hóspedes Cadastrados</h1>
 
-    <button routerLink="/hospedes/inserir"
-            mat-raised-button
-            class="me-auto py-4 px-4 fs-8"
-            color="primary">
-      <mat-icon>add</mat-icon>
-      Novo Hóspede
-    </button>
+    <div class="d-flex justify-content-start mb-3">
+      <button
+        routerLink="/hospedes/inserir"
+        mat-raised-button
+        color="primary"
+        class="d-flex align-items-center gap-2"
+      >
+        <mat-icon>person_add</mat-icon>
+        Novo Hóspede
+      </button>
+    </div>
 
-    <div>
-      <table>
+    <div class="table-wrapper">
+      <table class="custom-table">
         <thead>
           <tr>
             <th>NOME</th>
@@ -23,6 +25,7 @@
             <th>AÇÕES</th>
           </tr>
         </thead>
+
         <tbody>
           <tr *ngFor="let hospede of hospedes$ | async">
             <td>{{ hospede.name }}</td>
@@ -30,20 +33,31 @@
             <td>{{ hospede.email }}</td>
             <td>{{ hospede.phoneNumber }}</td>
             <td>
-              <div class="d-flex align-items-center justify-content-center">
-                <button mat-stroked-button
-                        class="m-2"
-                        routerLink="/hospedes/editar/{{hospede.id}}"
-                        color="accent">
+              <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button
+                  mat-stroked-button
+                  color="accent"
+                  routerLink="/hospedes/editar/{{ hospede.id }}"
+                >
+                  <mat-icon>edit</mat-icon>
                   Editar
                 </button>
-                <button mat-stroked-button
-                        class="m-2"
-                        routerLink="/hospedes/excluir/{{hospede.id}}"
-                        color="warn">
+
+                <button
+                  mat-stroked-button
+                  color="warn"
+                  routerLink="/hospedes/excluir/{{ hospede.id }}"
+                >
+                  <mat-icon>delete</mat-icon>
                   Excluir
                 </button>
               </div>
+            </td>
+          </tr>
+
+          <tr *ngIf="(hospedes$ | async)?.length === 0">
+            <td colspan="5" class="text-center no-data">
+              Nenhum hóspede cadastrado.
             </td>
           </tr>
         </tbody>

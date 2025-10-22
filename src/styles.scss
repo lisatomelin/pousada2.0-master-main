@@ -7,3 +7,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-mdc-raised-button.mat-primary {
   --mdc-protected-button-container-color: #487296;
 }
+
+:root {
+  /* Global Angular Material (MDC) theme variables — alter these to change app-wide colors */
+  --mdc-theme-primary: #487296; /* primary color */
+
+}
