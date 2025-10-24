@@ -21,8 +21,8 @@
 
         <tbody>
           <tr *ngFor="let financeiro of financeiro$ | async">
-            <td>{{ financeiro.checkIn }}</td>
-            <td>{{ financeiro.checkOut }}</td>
+            <td>{{ formatarData(financeiro.checkIn) }}</td>
+            <td>{{ formatarData(financeiro.checkOut) }}</td>
             <td>{{ financeiro.guestName }}</td>
             <td>{{ financeiro.roomName }}</td>
             <td>{{ financeiro.reservationValue | currency:'BRL' }}</td>
@@ -40,7 +40,7 @@
               </span>
             </td>
             <td>
-              <div class="d-flex flex-wrap justify-content-center gap-2">
+              <div class="action-buttons d-flex flex-wrap justify-content-center gap-2">
                 <button
                   mat-stroked-button
                   color="accent"

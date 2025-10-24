@@ -37,11 +37,12 @@
             <td>{{ buscaDescricaoQuarto(reserva.roomId) }}</td>
             <td>{{ buscaNomeHospede(reserva.guestId) }}</td>
             <td>
-              <div class="d-flex flex-wrap justify-content-center gap-2">
+              <div class="action-buttons d-flex flex-wrap justify-content-center gap-2">
                 <button
                   mat-stroked-button
                   color="accent"
                   routerLink="/reservas/editar/{{ reserva.id }}"
+
                 >
                   <mat-icon>edit</mat-icon>
                   Editar

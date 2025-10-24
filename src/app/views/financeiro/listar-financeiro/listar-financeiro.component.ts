@@ -25,6 +25,18 @@ export class ListarFinanceiroComponent implements OnInit {
     this.findReservas();
   }
 
+  protected formatarData(date: Date): string {
+    let dataReal: string = date as unknown as string;
+    if (dataReal.includes('T')) {
+      dataReal = dataReal.split('T')[0];
+    }
+    if (dataReal.includes('-')){
+      const auxiliary: string[] = dataReal.split('-');
+      dataReal = auxiliary.reverse().join('/');
+    }
+    return dataReal;
+  }
+
   checkoutReserva(financeiro: FinancialViewModel): void {
     if (financeiro.status === 'Finalizado') return;
     this.financeiroService.checkout(financeiro.id).subscribe({

@@ -3,7 +3,7 @@
     <h1 class="fs-2 text-center mb-4">Lista de Hóspedes Cadastrados</h1>
 
     <div class="d-flex justify-content-start mb-3">
-      <button
+      <button class ="btn btn-primary"
         routerLink="/hospedes/inserir"
         mat-raised-button
         color="primary"
@@ -33,7 +33,7 @@
             <td>{{ hospede.email }}</td>
             <td>{{ hospede.phoneNumber }}</td>
             <td>
-              <div class="d-flex flex-wrap justify-content-center gap-2">
+              <div class="action-buttons d-flex flex-wrap justify-content-center gap-2">
                 <button
                   mat-stroked-button
                   color="accent"

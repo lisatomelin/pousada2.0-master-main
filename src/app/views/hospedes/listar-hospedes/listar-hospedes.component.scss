@@ -9,8 +9,15 @@ h1 {
   margin-top: 20px;
 }
 
-button {
+
+.mat-mdc-raised-button{
   padding-left: 10px;
+  margin-left: 20px;
+}
+
+btn-primary {
+  padding-left: 10px;
+  margin-left: 20px;
 }
 
 .table-wrapper {
@@ -63,7 +70,7 @@ button {
 
 .action-buttons {
   display: inline-flex;
-  gap: 20px; /* aumento do espaçamento entre botões */
+  gap: 6px; /* aumento do espaçamento entre botões */
   justify-content: center;
   align-items: center;
 }

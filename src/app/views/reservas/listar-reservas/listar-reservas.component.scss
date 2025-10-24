@@ -9,8 +9,9 @@ h1 {
   margin-top: 20px;
 }
 
-button {
+.mat-mdc-raised-button{
   padding-left: 10px;
+  margin-left: 20px;
 }
 
 .table-wrapper {
@@ -63,7 +64,7 @@ button {
 
 .action-buttons {
   display: inline-flex;
-  gap: 6px;
+  gap: 6px; /* aumentar espaçamento entre botões */
   justify-content: center;
   align-items: center;
 }
@@ -83,9 +84,11 @@ button {
 
 .action-buttons .btn-edit {
   border-color: #7aa;
+   margin-left: 6px;
 }
 .action-buttons .btn-delete {
   border-color: #e6a;
+  /* margem extra caso o gap não seja aplicado por alguma regra */
 }
 
 .material-symbols-outlined {
