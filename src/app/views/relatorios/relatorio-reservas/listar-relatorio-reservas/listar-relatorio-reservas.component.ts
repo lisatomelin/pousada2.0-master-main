@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 import { forkJoin } from 'rxjs';
 
+import { HttpErrorResponse } from '@angular/common/http';
 import { saveAs } from 'file-saver';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import * as moment from 'moment';
 import { NotificationService } from 'src/app/core/notification/services/notification.service';
+import { lerFalhaHttp } from 'src/app/core/utils/ler-falha-http';
 import { FinancialViewModel } from 'src/app/views/financeiro/models/financial-View.Model';
 import { FinanceiroService } from 'src/app/views/financeiro/services/financeiro.service';
 import { GuestViewModel } from 'src/app/views/hospedes/models/guest-View.Model';
@@ -16,8 +18,6 @@ import { QuartosService } from 'src/app/views/quartos/services/quartos.service';
 import { ReservationViewModel } from 'src/app/views/reservas/models/reservation-View.Model';
 import { ReservasService } from 'src/app/views/reservas/services/reservas.service';
 import * as XLSX from 'xlsx';
-import { HttpErrorResponse } from '@angular/common/http';
-import { lerFalhaHttp } from 'src/app/core/utils/ler-falha-http';
 
 interface Report {
   checkIn: string;

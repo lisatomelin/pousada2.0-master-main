@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { uuidv4 } from 'src/app/core/utils/uuidv4';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { RoomsViewModel } from './../models/rooms-View.Model';
 

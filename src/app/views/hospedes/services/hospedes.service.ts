@@ -1,11 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, of } from 'rxjs';
-import { uuidv4 } from 'src/app/core/utils/uuidv4';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { GuestViewModel } from '../models/guest-View.Model';
-
-const GUESTS_KEY = 'guests';
 
 @Injectable({
   providedIn: 'root',

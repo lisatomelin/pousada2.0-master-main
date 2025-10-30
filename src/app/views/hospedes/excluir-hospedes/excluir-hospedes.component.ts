@@ -1,11 +1,11 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { NotificationService } from 'src/app/core/notification/services/notification.service';
+import { lerFalhaHttp } from 'src/app/core/utils/ler-falha-http';
 import { GuestViewModel } from '../models/guest-View.Model';
 import { HospedesService } from '../services/hospedes.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { NotificationService } from 'src/app/core/notification/services/notification.service';
-import { HttpErrorResponse } from '@angular/common/http';
-import { lerFalhaHttp } from 'src/app/core/utils/ler-falha-http';
 @Component({
   selector: 'app-excluir-hospedes',
   templateUrl: './excluir-hospedes.component.html',
