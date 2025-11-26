@@ -1,7 +1,14 @@
 services:
   - type: web
     name: quinta-ypua-angular
-    env: static
+    plan: free
+    runtime: node
+    region: frankfurt
+    branch: main
+
     buildCommand: npm install && npm run build
-    staticPublishPath: dist/pousada-app
-    pullRequestPreviewsEnabled: true
+    startCommand: npx serve -s dist/pousada-app
+
+    envVars:
+      - key: NODE_VERSION
+        value: 20
