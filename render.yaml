@@ -5,3 +5,7 @@ services:
     buildCommand: npm install && npm run build
     staticPublishPath: dist/pousada-app
     pullRequestPreviewsEnabled: true
+    redirects:
+      - source: /<*
+        destination: /index.html
+        status: 200
