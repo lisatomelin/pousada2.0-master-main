@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pousada2.0",
+            "outputPath": "dist/pousada-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -115,4 +115,5 @@
     "analytics": "f827f7c5-3a98-4147-85c0-41a5d9e42b5f"
   }
 }
+
 
